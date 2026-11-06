@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Nino Tsikhistavi | People Analytics and Human-Centric Management</title>
+<meta name="description" content="Personal website of Nino Tsikhistavi, MSc People Analytics and Human-Centric Management student at UCL: selected work, about me, CV and contact.">
+<style>
+  :root {
+    --bg: #fbfbf9;
+    --surface: #f2f3f5;
+    --text: #15181d;
+    --muted: #4f5866;
+    --line: #dcdfe4;
+    --blue: #0a58b5;
+    --orange: #b04400;
+    --orange-soft: #fff0e3;
+    --focus: #e07a10;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1217;
+      --surface: #181c23;
+      --text: #eceef1;
+      --muted: #a6aebb;
+      --line: #2b313b;
+      --blue: #82b8ff;
+      --orange: #ffa552;
+      --orange-soft: #2a1d10;
+      --focus: #ffa552;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 42rem; margin: 0 auto; padding: 0 1.5rem; }
+
+  a { color: var(--blue); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 3px; }
+  .skip { position: absolute; left: -999px; top: .5rem; background: var(--text); color: var(--bg); padding: .5rem 1rem; border-radius: 6px; z-index: 10; }
+  .skip:focus { left: .5rem; color: var(--bg); }
+
+  /* top bar */
+  .bar { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .5rem 1.5rem; padding: 1.75rem 0 0; }
+  .brand { font-weight: 700; letter-spacing: -.01em; color: var(--text); text-decoration: none; }
+  .brand:hover { text-decoration: underline; }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem 1.4rem; }
+  nav a { color: var(--muted); font-size: 1rem; font-weight: 500; }
+  nav a:hover { color: var(--text); }
+
+  /* hero */
+  .hero { padding: 4.5rem 0 1rem; }
+  .hero-top { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.75rem; }
+  .portrait {
+    flex: none; width: 5.5rem; height: 5.5rem; border-radius: 50%;
+    border: 1.5px dashed var(--muted); background: var(--surface);
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    font-size: .8rem; line-height: 1.25; font-weight: 600; color: var(--muted); padding: .5rem;
+  }
+  h1 { font-size: clamp(2.4rem, 8vw, 3.6rem); line-height: 1.05; letter-spacing: -.035em; margin: 0; font-weight: 750; }
+  .headline { font-size: clamp(1.2rem, 3.4vw, 1.45rem); line-height: 1.4; letter-spacing: -.01em; font-weight: 500; margin: 0 0 1.5rem; max-width: 34rem; }
+  .bio { color: var(--muted); margin: 0 0 1rem; }
+
+  /* sections */
+  section { padding: 4rem 0 0; }
+  .eyebrow { display: flex; align-items: center; gap: .8rem; margin: 0 0 1.5rem; font-size: .85rem; text-transform: uppercase; letter-spacing: .14em; font-weight: 700; color: var(--orange); }
+  .eyebrow::after { content: ""; height: 1px; flex: 1; background: var(--line); }
+  h2 { margin: 0; font: inherit; }
+  h3 { font-size: 1.15rem; line-height: 1.35; letter-spacing: -.01em; margin: 0 0 .25rem; font-weight: 650; }
+  p { margin: 0 0 1rem; }
+  .muted { color: var(--muted); }
+  .sub { font-size: .85rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--muted); margin: 2.5rem 0 1rem; }
+
+  /* work rows */
+  .item { padding: 1.4rem 0; border-top: 1px solid var(--line); }
+  .item:last-of-type { border-bottom: 1px solid var(--line); }
+  .item p { margin: 0 0 .5rem; }
+  .meta { font-size: .95rem; color: var(--muted); font-weight: 500; margin: 0 0 .15rem !important; }
+  .soon { border: 1.5px dashed var(--orange); background: var(--orange-soft); color: var(--orange); font-weight: 700; border-radius: 10px; padding: 1.4rem 1rem; text-align: center; margin: .9rem 0 .25rem; }
+  .ph { font-weight: 700; color: var(--orange); }
+  .tag { display: inline-block; font-size: .85rem; font-weight: 700; color: var(--orange); border: 1.5px solid var(--orange); border-radius: 999px; padding: 0 .6rem; margin-left: .35rem; line-height: 1.5; }
+  .links { list-style: none; margin: .6rem 0 0; padding: 0; }
+  .links li { margin-bottom: .55rem; padding-left: 1.1rem; position: relative; }
+  .links li::before { content: "\2192"; position: absolute; left: 0; color: var(--orange); }
+
+  /* CV rows */
+  .row { display: grid; grid-template-columns: 1fr; gap: .15rem; padding: 1.25rem 0; border-top: 1px solid var(--line); }
+  .row:last-of-type { border-bottom: 1px solid var(--line); }
+  @media (min-width: 40rem) { .row { grid-template-columns: 9.5rem 1fr; gap: 1.5rem; } }
+  .when { font-size: .95rem; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .row h3 { margin-bottom: 0; }
+  .row ul { margin: .5rem 0 0; padding-left: 1.1rem; }
+  .row li { margin-bottom: .35rem; }
+  .row li::marker { color: var(--orange); }
+  dl { margin: 0; }
+  dt { font-weight: 650; margin-top: 1rem; }
+  dd { margin: 0; color: var(--muted); }
+
+  footer { margin-top: 6rem; padding: 2rem 0 3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .95rem; }
+  footer p { margin: 0 0 .25rem; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<div class="wrap">
+  <div class="bar">
+    <a class="brand" href="#home">Nino Tsikhistavi</a>
+    <nav aria-label="Main menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <header class="hero" id="home">
+    <div class="hero-top">
+      <div class="portrait">Portrait coming soon</div>
+    </div>
+    <h1>Nino Tsikhistavi</h1>
+    <p class="headline" style="margin-top:1rem">MSc People Analytics and Human-Centric Management student at UCL, turning research and data into clear recommendations.</p>
+    <p class="bio">I have a psychology background in research and data analysis. I supported a cross-border deal for an ASX-listed company at a private investment firm, and co-designed and presented an HR operating model for Metivo (BASF Group) under cost targets. I am multilingual and I am seeking to solve complex client problems in management consulting.</p>
+  </header>
+
+  <main id="main">
+
+    <section id="works" aria-labelledby="works-h">
+      <p class="eyebrow"><span id="works-h" role="heading" aria-level="2">Works</span></p>
+
+      <p class="sub" style="margin-top:0">Data visualisation portfolio</p>
+      <article class="item">
+        <p class="meta">Project 1</p>
+        <h3 class="ph">[PLACEHOLDER: chart title]</h3>
+        <p><strong>Question the chart answers:</strong> <span class="ph">[PLACEHOLDER: one-line question]</span></p>
+        <p><strong>Data source:</strong> <span class="ph">[PLACEHOLDER: data source]</span></p>
+        <div class="soon">Chart coming soon</div>
+      </article>
+
+      <p class="sub">Other work and features</p>
+      <article class="item">
+        <p class="meta">Teaching</p>
+        <h3>French exam study guide</h3>
+        <p class="muted">A study guide for an Intermediate French exam, made while I was a Teaching Assistant at Trinity College (Jan 2025 &ndash; May 2025).</p>
+        <div class="soon">Study guide file coming soon</div>
+      </article>
+      <article class="item">
+        <p class="meta">International House, Trinity College</p>
+        <h3>Co-President of International House</h3>
+        <p class="muted">Co-President (2024 &ndash; 2025) and Social Chair (2021 &ndash; 2023) of International House at Trinity College.</p>
+        <ul class="links">
+          <li><a href="https://trinitytripod.com/arts/senior-spotlight-international-house-presidents-francesco-castagna-and-nini-tsikhistavi/" target="_blank" rel="noopener noreferrer">Senior spotlight interview about me and my time as Co-President (Trinity Tripod)</a></li>
+          <li><a href="https://trinitytripod.com/arts/i-houses-13th-international-show/" target="_blank" rel="noopener noreferrer">I-House&rsquo;s 13th International Show (Trinity Tripod)</a></li>
+          <li>Instagram handle for International House news: <strong>@trinity.ihouse</strong> <span class="tag">Link coming soon</span></li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="about" aria-labelledby="about-h">
+      <p class="eyebrow"><span id="about-h" role="heading" aria-level="2">About me</span></p>
+      <p>I am an MSc People Analytics and Human-Centric Management student at University College London (UCL). Before that I studied Psychology at Trinity College in Hartford, Connecticut, where I worked in research labs, ran primary research end to end, and learned to turn findings into clear recommendations.</p>
+      <p>In my work so far I have supported a cross-border deal for an ASX-listed company at a private investment firm, working across cultures and seniority levels. At UCL I co-designed and presented a 2028 HR operating model for Metivo (BASF Group), balancing cost targets, AI adoption and employee experience.</p>
+      <p><strong>Languages:</strong> <span class="muted">Georgian (native); English, French and Russian (fluent); Spanish (basic).</span></p>
+      <p><strong>Interests:</strong> <span class="muted">music, swimming, writing, international literature, languages, cultural exchange.</span></p>
+    </section>
+
+    <section id="cv" aria-labelledby="cv-h">
+      <p class="eyebrow"><span id="cv-h" role="heading" aria-level="2">CV</span></p>
+      <p class="muted">CV download coming soon</p>
+
+      <p class="sub">Education</p>
+      <div class="row">
+        <div class="when">Sept 2026 &ndash; Sept 2027</div>
+        <div>
+          <h3>MSc People Analytics and Human-Centric Management</h3>
+          <p class="muted" style="margin:0">University College London (UCL), London</p>
+          <ul>
+            <li>Modules: People Analytics; Data Visualisation (Python); Strategic HRM; Sustainable Work Design</li>
+            <li>Metivo &times; UCL HR Hackathon (Oct 2026): co-designed and presented a 2028 HR operating model for Metivo (BASF Group), balancing cost targets, AI adoption and employee experience</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">Sept 2021 &ndash; May 2025</div>
+        <div>
+          <h3>BSc Psychology</h3>
+          <p class="muted" style="margin:0">Trinity College, Hartford, CT, USA</p>
+          <ul>
+            <li>Faculty Honours (semester GPA 3.67+/4.0) in four semesters</li>
+            <li>Semester abroad at the University of Edinburgh, UK (Sept &ndash; Dec 2022)</li>
+            <li>Modules: Research Design and Analysis; Social Psychology (with Lab); Cultural Psychology</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="sub">Experience</p>
+      <div class="row">
+        <div class="when">Jun 2025 &ndash; Aug 2026</div>
+        <div>
+          <h3>Assistant to the Founder</h3>
+          <p class="muted" style="margin:0">Park Capital Management LLC, Tbilisi, Georgia (private investment company)</p>
+          <ul>
+            <li>Supported a cross-border deal for ASX-listed Krakatoa Resources to acquire up to 80% of portfolio company Caucasus Minerals, a Georgian mining exploration business</li>
+            <li>Helped prepare the contract and supported the founder&rsquo;s email negotiations with Krakatoa&rsquo;s Australian team</li>
+            <li>Worked closely with the founder, optimising the portfolio and regularly discussing business decisions</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">Jan 2025 &ndash; May 2025</div>
+        <div>
+          <h3>Teaching Assistant, Intermediate French</h3>
+          <p class="muted" style="margin:0">Trinity College, Hartford, CT, USA</p>
+          <ul>
+            <li>Held weekly office hours and supported small-group speaking practice for students; created study materials</li>
+            <li>Tracked coursework, sent reminders and flagged common student difficulties to the instructor ahead of exams</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="sub">Research experience</p>
+      <div class="row">
+        <div class="when">Sept 2024 &ndash; Dec 2024</div>
+        <div>
+          <h3>Researcher</h3>
+          <p class="muted" style="margin:0">Social Psychology Lab, Trinity College</p>
+          <ul>
+            <li>Ran primary research end to end: co-designed and distributed a survey on AI use to undergraduates, then co-wrote the results and implications</li>
+            <li>Wrote theory-based items to develop and test a new psychometric scale measuring student impostor syndrome</li>
+            <li>Helped convert open-ended survey responses into quantitative data in a study on social media use and FoMO</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">Jan 2025 &ndash; May 2025</div>
+        <div>
+          <h3>Research Assistant</h3>
+          <p class="muted" style="margin:0">ReMIND Lab, Trinity College</p>
+          <ul>
+            <li>Recruited and screened participants for a study on post-concussion cognition in domestic violence survivors</li>
+            <li>Contributed to weekly lab meetings on experimental design and resolving data quality issues</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="sub">Leadership</p>
+      <div class="row">
+        <div class="when">Sept 2021 &ndash; May 2025</div>
+        <div>
+          <h3>Co-President (2024 &ndash; 2025); Social Chair (2021 &ndash; 2023)</h3>
+          <p class="muted" style="margin:0">International House, Trinity College</p>
+          <ul>
+            <li>Organised 14 cultural events in two months, including The International Show, collaborating with other student organisations</li>
+            <li>Became a trusted first point of contact for newer international students; built close relationships with the board</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="sub">Skills &amp; interests</p>
+      <dl>
+        <dt>Data &amp; research</dt>
+        <dd>Excel; PowerPoint; SPSS; Python (currently learning, UCL MSc); survey and psychometric scale design; statistical analysis; data visualisation; literature review; report writing</dd>
+        <dt>Software</dt>
+        <dd>Word; Excel; PowerPoint; Google Workspace; Canva</dd>
+        <dt>Languages</dt>
+        <dd>Georgian (native); English, French and Russian (fluent); Spanish (basic)</dd>
+        <dt>Interests</dt>
+        <dd>Music, swimming, writing, international literature, languages, cultural exchange</dd>
+      </dl>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-h">
+      <p class="eyebrow"><span id="contact-h" role="heading" aria-level="2">Contact</span></p>
+      <p>The best way to reach me is through LinkedIn.</p>
+      <p><a href="https://www.linkedin.com/in/nino-tsikhistavi" target="_blank" rel="noopener noreferrer"><strong>Nino Tsikhistavi on LinkedIn</strong></a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Nino Tsikhistavi</p>
+    <p>Built with the help of generative AI; content and decisions are my own.</p>
+  </footer>
+</div>
+</body>
+</html>
