@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>Nino Tsikhistavi | People Analytics and Human-Centric Management</title>
-<meta name="description" content="Personal website of Nino Tsikhistavi, MSc People Analytics and Human-Centric Management student at UCL: selected work, about me, CV and contact.">
+<meta name="description" content="Personal website of Nino Tsikhistavi, MSc People Analytics and Human-Centric Management student at UCL: selected work, projects, about me, CV and contact.">
 <style>
   :root {
     --bg: #fbfbf9;
@@ -54,7 +54,7 @@
   .bar { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .5rem 1.5rem; padding: 1.75rem 0 0; }
   .brand { font-weight: 700; letter-spacing: -.01em; color: var(--text); text-decoration: none; }
   .brand:hover { text-decoration: underline; }
-  nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem 1.4rem; }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem 1.1rem; }
   nav a { color: var(--muted); font-size: 1rem; font-weight: 500; }
   nav a:hover { color: var(--text); }
 
@@ -86,12 +86,17 @@
   .item:last-of-type { border-bottom: 1px solid var(--line); }
   .item p { margin: 0 0 .5rem; }
   .meta { font-size: .95rem; color: var(--muted); font-weight: 500; margin: 0 0 .15rem !important; }
-  .soon { border: 1.5px dashed var(--orange); background: var(--orange-soft); color: var(--orange); font-weight: 700; border-radius: 10px; padding: 1.4rem 1rem; text-align: center; margin: .9rem 0 .25rem; }
+  .soon { border: 1.5px dashed var(--orange); background: var(--orange-soft); color: var(--orange); font-weight: 700; border-radius: 10px; padding: 1.4rem 1rem; text-align: center; margin: .9rem 0 0; }
   .ph { font-weight: 700; color: var(--orange); }
-  .tag { display: inline-block; font-size: .85rem; font-weight: 700; color: var(--orange); border: 1.5px solid var(--orange); border-radius: 999px; padding: 0 .6rem; margin-left: .35rem; line-height: 1.5; }
+  .tag { display: inline-block; font-size: .85rem; font-weight: 700; color: var(--orange); border: 1.5px solid var(--orange); border-radius: 999px; padding: 0 .6rem; margin-left: .35rem; line-height: 1.7; }
   .links { list-style: none; margin: .6rem 0 0; padding: 0; }
   .links li { margin-bottom: .55rem; padding-left: 1.1rem; position: relative; }
   .links li::before { content: "\2192"; position: absolute; left: 0; color: var(--orange); }
+
+  /* project starters */
+  .project-note { color: var(--muted); margin-bottom: .5rem; }
+  .project-prompt { color: var(--muted); font-size: .98rem; }
+  .project-prompt strong { color: var(--text); }
 
   /* CV rows */
   .row { display: grid; grid-template-columns: 1fr; gap: .15rem; padding: 1.25rem 0; border-top: 1px solid var(--line); }
@@ -108,6 +113,13 @@
 
   footer { margin-top: 6rem; padding: 2rem 0 3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .95rem; }
   footer p { margin: 0 0 .25rem; }
+  @media (max-width: 30rem) {
+    .wrap { padding-inline: 1.15rem; }
+    .bar { align-items: flex-start; }
+    nav { width: 100%; }
+    nav ul { gap: .25rem 1rem; }
+    .hero { padding-top: 3rem; }
+  }
 </style>
 </head>
 <body>
@@ -120,6 +132,7 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#works">Works</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#about">About me</a></li>
         <li><a href="#cv">CV</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -133,7 +146,7 @@
     </div>
     <h1>Nino Tsikhistavi</h1>
     <p class="headline" style="margin-top:1rem">MSc People Analytics and Human-Centric Management student at UCL, turning research and data into clear recommendations.</p>
-    <p class="bio">I have a psychology background in research and data analysis. I supported a cross-border deal for an ASX-listed company at a private investment firm, and co-designed and presented an HR operating model for Metivo (BASF Group) under cost targets. I am multilingual and I am seeking to solve complex client problems in management consulting.</p>
+    <p class="bio">I have a psychology background in research and data analysis. I supported a cross-border deal for an ASX-listed company at a private investment firm, and co-designed and presented an HR operating model at UCL.</p>
   </header>
 
   <main id="main">
@@ -162,16 +175,40 @@
         <h3>Co-President of International House</h3>
         <p class="muted">Co-President (2024 &ndash; 2025) and Social Chair (2021 &ndash; 2023) of International House at Trinity College.</p>
         <ul class="links">
-          <li><a href="https://trinitytripod.com/arts/senior-spotlight-international-house-presidents-francesco-castagna-and-nini-tsikhistavi/" target="_blank" rel="noopener noreferrer">Senior spotlight interview about me and my time as Co-President (Trinity Tripod)</a></li>
+          <li><a href="https://trinitytripod.com/arts/senior-spotlight-international-house-presidents-francesco-castagna-and-nini-tsikhistavi/" target="_blank" rel="noopener noreferrer">Senior Spotlight: International House Presidents (Trinity Tripod)</a></li>
           <li><a href="https://trinitytripod.com/arts/i-houses-13th-international-show/" target="_blank" rel="noopener noreferrer">I-House&rsquo;s 13th International Show (Trinity Tripod)</a></li>
           <li>Instagram handle for International House news: <strong>@trinity.ihouse</strong> <span class="tag">Link coming soon</span></li>
         </ul>
       </article>
     </section>
 
+    <section id="projects" aria-labelledby="projects-h">
+      <p class="eyebrow"><span id="projects-h" role="heading" aria-level="2">Projects</span></p>
+      <p class="project-note">A few pieces of work I&rsquo;m proud of. More details coming soon.</p>
+      <!-- Replace each starter with a project title, a short description, and (if available) a link. Remove any unused starters. -->
+      <article class="item">
+        <p class="meta">Project 01</p>
+        <h3>Add a project title</h3>
+        <p class="project-prompt"><strong>What was the question or challenge?</strong> Add one sentence of context.</p>
+        <p class="project-prompt"><strong>What did you do?</strong> Describe your contribution and the outcome.</p>
+      </article>
+      <article class="item">
+        <p class="meta">Project 02</p>
+        <h3>Add a project title</h3>
+        <p class="project-prompt"><strong>What was the question or challenge?</strong> Add one sentence of context.</p>
+        <p class="project-prompt"><strong>What did you do?</strong> Describe your contribution and the outcome.</p>
+      </article>
+      <article class="item">
+        <p class="meta">Project 03</p>
+        <h3>Add a project title</h3>
+        <p class="project-prompt"><strong>What was the question or challenge?</strong> Add one sentence of context.</p>
+        <p class="project-prompt"><strong>What did you do?</strong> Describe your contribution and the outcome.</p>
+      </article>
+    </section>
+
     <section id="about" aria-labelledby="about-h">
       <p class="eyebrow"><span id="about-h" role="heading" aria-level="2">About me</span></p>
-      <p>I am an MSc People Analytics and Human-Centric Management student at University College London (UCL). Before that I studied Psychology at Trinity College in Hartford, Connecticut, where I worked in research labs, ran primary research end to end, and learned to turn findings into clear recommendations.</p>
+      <p>I am an MSc People Analytics and Human-Centric Management student at University College London (UCL). Before that I studied Psychology at Trinity College in Hartford, Connecticut, where I developed a strong foundation in research, data analysis and understanding people.</p>
       <p>In my work so far I have supported a cross-border deal for an ASX-listed company at a private investment firm, working across cultures and seniority levels. At UCL I co-designed and presented a 2028 HR operating model for Metivo (BASF Group), balancing cost targets, AI adoption and employee experience.</p>
       <p><strong>Languages:</strong> <span class="muted">Georgian (native); English, French and Russian (fluent); Spanish (basic).</span></p>
       <p><strong>Interests:</strong> <span class="muted">music, swimming, writing, international literature, languages, cultural exchange.</span></p>
